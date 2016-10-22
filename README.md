@@ -1,4 +1,4 @@
-# antd-plus
+# antd-plus (持续完善ing...)
 基于antd开发的UI设计器
 
 ### 前端未来
@@ -33,15 +33,24 @@
 
 开发人员 通过可视化设计器让去组织UI模块， 通过UI的属性配置来满足部分个性化需求，以此来解决API文档维护和人员培训带来的成本。
 
-## 组件配置
 
-### 结构
+## 配置
+通过组件关系结构的配置生成工具栏，同时根据组件的关系结构限制拖放区域，以此来保证生成的组件结构是可预见的；
+
+把组件的属性按数据类型（string、boolean、JSON、enum等）字段化，以此来生成动态的属性面板；
+
+
+### 组件关系结构
+![结构](https://raw.githubusercontent.com/gitwuhao/screenshots/master/201610221658.png)
+
+
+### JSON
 ```
 [{
   "label": "表单",
   "key": "form",
   "children": [{
-  "type": "text"
+  "type": "text" //组件类型
   }, {
   "type": "textare"
   }, {
@@ -86,7 +95,12 @@
 }]
 ```
 
-### 属性
+
+### 组件属性
+![组件属性](https://raw.githubusercontent.com/gitwuhao/screenshots/master/201610221701.png)
+
+
+### JSON
 ```
 {
  "prop": [{
