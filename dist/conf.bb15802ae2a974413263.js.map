@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./conf/index.js"],"names":["struct","property"],"mappings":";;;;AAAA,QAAOA,MAAP,MAAmB,UAAnB;AACA,QAAOC,QAAP,MAAqB,YAArB,C","file":"conf.bb15802ae2a974413263.js","sourcesContent":["import struct from './struct'\r\nimport property from './property'\r\n\r\n\n\n\n/** WEBPACK FOOTER **\n ** ./conf/index.js\n **/"],"sourceRoot":""}

@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./scripts/polyfills.js"],"names":[],"mappings":";;;;AAAA,QAAO,gBAAP,C","file":"polyfills.bb15802ae2a974413263.js","sourcesContent":["import 'babel-polyfill'\r\n\r\n\r\n\n\n\n/** WEBPACK FOOTER **\n ** ./scripts/polyfills.js\n **/"],"sourceRoot":""}
