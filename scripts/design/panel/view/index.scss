@@ -1,0 +1,52 @@
+@import 'scripts/design/style/size.scss';
+
+#app .view {
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #FFF;
+    position: fixed;
+    left: $tool-width;
+    top: 0px;
+    bottom: 0px;
+    right: $property-width;
+    overflow-x: auto;
+    overflow-y: auto;
+    -webkit-user-select: none;
+    
+    /*
+    .root>div{
+        padding: 5px;
+        background-color: #FFF;
+        border-radius: 5px;
+        min-height: 50px;
+    }*/
+
+    ins{
+        min-height: 50px;
+        display: block;
+        border: 1px solid #DDD;
+        margin: 5px;
+    }
+    ins.dropping/*>**/{
+        /*
+        outline: 3px solid #81D4FA;
+        outline-offset: -8px;
+        opacity: 0.3;
+        padding-left: 0px;
+        outline-offset: 1px;
+        */
+        outline-offset: 1px;
+        outline: 1px solid #03A9F4;
+    }
+    ins.selected{
+        outline-offset: 1px;
+        outline: 1px solid #03A9F4;
+    }
+/*
+    &[draggable],&[draggable="true"] {
+        -webkit-user-select: none;
+        -webkit-user-drag: element;
+    }
+*/    
+}

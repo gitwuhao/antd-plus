@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>index</title>
+</head>
+
+<body class="bg">
+    <div id="app"></div>
+    <script type="text/javascript">
+    function getInitialState(){
+		  return [{
+		    type: 'form',
+		    children: [{
+		      type: 'select',
+		      multiple:true,
+		      onChange:function(){
+		      	console.info('onChange');
+		      },
+		      onSelect:function(){
+		      	console.info('onChange');
+		      }
+		    },{
+		      type: 'text',
+		      label:'my text'
+		    }, {
+		      type: 'text'
+		    }, {
+		      type: 'textare'
+		    }, {
+		      type: 'button'
+		    }, {
+		      type: 'checkbox.group'
+		    }, {
+		      type: 'number'
+		    }, {
+		      type: 'datepicker'
+		    }, {
+		      type: 'checkbox.group',
+		      children: [{
+		        type: 'checkbox',
+		        value:'1'
+		      },{
+		        type: 'checkbox',
+		        value:'2'
+		      },{
+		        type: 'checkbox',
+		        value:'3'
+		      }]
+		    }, {
+		      type: 'radio.group',
+		      children: [{
+		        type: 'radio',
+		        value:'1'
+		      },{
+		        type: 'radio',
+		        value:'2'
+		      },{
+		        type: 'radio',
+		        value:'3'
+		      },{
+		        type: 'radio',
+		        value:'4'
+		      }]
+		    }]
+		  }];
+    }
+    </script>
+<script type="text/javascript" src="vendor.bb15802ae2a974413263.js"></script><script type="text/javascript" src="polyfills.bb15802ae2a974413263.js"></script><script type="text/javascript" src="conf.bb15802ae2a974413263.js"></script><script type="text/javascript" src="app.bb15802ae2a974413263.js"></script></body>
+
+</html>
