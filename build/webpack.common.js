@@ -7,21 +7,25 @@ var path = require('path');
 
 module.exports = {
   entry: {
-    'conf': './conf/index.js',
-    'vendor': [
-      'react','react-dom',
-      'redux','react-redux','redux-thunk',
-      'antd',
-      'immutable',
-      './scripts/vendor.js'
+    'react-redux-immutable': [
+      'react', 'react-dom',
+      'redux', 'react-redux', 'redux-thunk',
+      'immutable'
     ],
-    'polyfills': './scripts/polyfills.js',
-    'app': './scripts/main.js'
+    'conf': ['./conf/index.js'],
+    'babel-polyfill': [
+      'babel-polyfill'
+    ],
+    'app': './src/main.js'
   },
 
   resolve: {
     extensions: ['', '.js'],
-    root: [ROOT_PATH]
+    root: [ROOT_PATH],
+    alias:{
+      methods$: 'src/3rd/methods/index.js',
+      dragula$:'src/3rd/plugins/dragula/index.js'
+    }
   },
 
   module: {
@@ -41,13 +45,13 @@ module.exports = {
       test: /\.js$/,
       exclude: /(node_modules|bower_components)/,
       loader: 'babel',
-      query: {compact: false}
+      query: { compact: false }
     }]
   },
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      names: ["vendor"]
+      names: ["babel-polyfill", "react-redux-immutable"]
     }),
     new HtmlWebpackPlugin({
       template: ROOT_PATH + '/index.html'
