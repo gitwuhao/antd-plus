@@ -20,7 +20,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js'],
+    extensions: ['', '.js','.jsx'],
     root: [ROOT_PATH],
     alias:{
       methods$: 'src/3rd/methods/index.js',
@@ -42,7 +42,7 @@ module.exports = {
       test: /\.scss$/,
       loaders: ["style", "css", "sass"]
     }, {
-      test: /\.js$/,
+      test: /\.(js|jsx)$/,
       exclude: /(node_modules|bower_components)/,
       loader: 'babel',
       query: { compact: false }
@@ -54,7 +54,7 @@ module.exports = {
       names: ["babel-polyfill", "react-redux-immutable"]
     }),
     new HtmlWebpackPlugin({
-      template: ROOT_PATH + '/index.html'
+      template: ROOT_PATH + '/src/index.html'
     })
   ]
 };
