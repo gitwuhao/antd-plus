@@ -7150,7 +7150,12 @@ webpackJsonp([0],[
 	
 	var getField = function getField(field) {
 	  var type = field.type,
-	      props = _objectWithoutProperties(field, ['type']);
+	      value = field.value,
+	      props = _objectWithoutProperties(field, ['type', 'value']);
+	
+	  if (!(0, _methods.isEmpty)(field.fieldValue)) {
+	    value = field.fieldValue;
+	  }
 	
 	  var FiledItem = void 0;
 	  if (type) {
@@ -7162,9 +7167,11 @@ webpackJsonp([0],[
 	  FiledItem = FiledItem || _index2.default.default;
 	
 	  if (type === 'boolean') {
-	    props.fieldValue = field.fieldValue && field.fieldValue != false ? true : false;
-	  } else if (type === 'json' && field.fieldValue) {
-	    props.fieldValue = JSON.stringify(field.fieldValue);
+	    props.fieldValue = value && value != false ? true : false;
+	  } else if (type === 'json' && value) {
+	    props.fieldValue = JSON.stringify(value);
+	  } else {
+	    props.fieldValue = value;
 	  }
 	  return _react2.default.createElement(FiledItem, _extends({}, props, { key: (0, _methods.getGuid)() }));
 	};
@@ -21255,4 +21262,4 @@ webpackJsonp([0],[
 
 /***/ }
 ]);
-//# sourceMappingURL=app.f881d424f8827ea3b167.js.map
+//# sourceMappingURL=app.395ef9b476838f9e5750.js.map

@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom'
 
 import { Form, Input, Select,Switch, Checkbox, Radio, Tooltip, Icon} from 'antd'
 
-import methods,{each,isFunction,getGuid} from 'methods'
+import methods,{each,isEmpty,isFunction,getGuid} from 'methods'
 
 import fileds from './field/index'
 
 
 
 const getField  = (field) => {
-	let {type,...props} = field;
+	let {type,value,...props} = field;
+  if(!isEmpty(field.fieldValue) ){
+    value= field.fieldValue;
+  }
 
 	let FiledItem;
 	if(type){
@@ -22,9 +25,11 @@ const getField  = (field) => {
 	FiledItem= FiledItem || fileds.default;
 
   if(type==='boolean'){
-    props.fieldValue=field.fieldValue && field.fieldValue!=false ? true : false;
-  }else if(type==='json' && field.fieldValue){
-		props.fieldValue=JSON.stringify(field.fieldValue);
+    props.fieldValue=value && value!=false ? true : false;
+  }else if(type==='json' && value){
+		props.fieldValue=JSON.stringify(value);
+  }else{
+    props.fieldValue=value;
   }
 	return (<FiledItem {...props} key={getGuid()}></FiledItem>);
 };

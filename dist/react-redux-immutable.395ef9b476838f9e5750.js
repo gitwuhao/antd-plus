@@ -97,7 +97,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 /******/
-/******/ 			script.src = __webpack_require__.p + "" + chunkId + "." + "f881d424f8827ea3b167" + ".chunk.js";
+/******/ 			script.src = __webpack_require__.p + "" + chunkId + "." + "395ef9b476838f9e5750" + ".chunk.js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -27153,4 +27153,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=react-redux-immutable.f881d424f8827ea3b167.js.map
+//# sourceMappingURL=react-redux-immutable.395ef9b476838f9e5750.js.map
